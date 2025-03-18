@@ -5,10 +5,10 @@ using System;
 
 public class GameUIManager : SingletonMonobehaviour<GameUIManager>
 {
-    private static Dictionary<ModelType, Delegate> _modelActionDictionary
-        = new Dictionary<ModelType, Delegate>();
+    private static Dictionary<TriggerType, Delegate> _modelActionDictionary
+        = new Dictionary<TriggerType, Delegate>();
 
-    public static void RegisterModelAction<T>(ModelType type, Action<T> action)
+    public static void RegisterModelAction<T>(TriggerType type, Action<T> action)
     {
         if (!_modelActionDictionary.ContainsKey(type))
         {
@@ -16,7 +16,7 @@ public class GameUIManager : SingletonMonobehaviour<GameUIManager>
         }
     }
 
-    public static void UnRegisterModelAction(ModelType type)
+    public static void UnRegisterModelAction(TriggerType type)
     {
         if (_modelActionDictionary.TryGetValue(type, out Delegate value))
         {
@@ -47,11 +47,16 @@ public class GameUIManager : SingletonMonobehaviour<GameUIManager>
     //| TypeB      | Action3           |
     //+----------------------+
 
-    public void ModelTrigger<T>(ModelType modelType, T value)
+    public void UpdateUITrigger<T>(TriggerType modelType, T value)
     {
         if(_modelActionDictionary.TryGetValue(modelType, out Delegate callBack))
         {
             (callBack as Action<T>).Invoke(value);
         }
     }
+}
+
+public enum TriggerType
+{
+    HealthModel
 }

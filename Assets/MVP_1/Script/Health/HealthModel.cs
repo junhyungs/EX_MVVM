@@ -17,12 +17,12 @@ public class HealthModel
 
     public HealthModel()
     {
-        GameUIManager.RegisterModelAction<int>(ModelType.HealthModel, SetHealth);
+        GameUIManager.RegisterModelAction<int>(TriggerType.HealthModel, SetHealth);
     }
 
     ~HealthModel()
     {
-        GameUIManager.UnRegisterModelAction(ModelType.HealthModel);
+        GameUIManager.UnRegisterModelAction(TriggerType.HealthModel);
     }
 
     public void SetHealth(int health)
