@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private HealthModel _healthModel;
     private Material _material;
+    private int _health;
 
     private void Awake()
     {
-        _healthModel = new HealthModel();
+        _health = 100;
+
         _material = GetComponent<MeshRenderer>().materials[0];
     }
 
     public void TakeDamage(int damage)
     {
+        _health -= damage;
+
         StartCoroutine(HitEffect());
-        _healthModel.TakeDamage(damage);
+
+        GameUIManager.Instance.ModelTrigger(ModelType.HealthModel, _health);
     }
 
     private IEnumerator HitEffect()

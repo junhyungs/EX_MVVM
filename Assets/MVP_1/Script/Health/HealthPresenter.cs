@@ -3,22 +3,24 @@ using System.Collections.Generic;
 
 public class HealthPresenter
 {
-    private IView<int> _view;
+    private IHealthView _view;
     private HealthModel _model;
 
-    public HealthPresenter(IView<int> view)
+    public HealthPresenter(IHealthView view)
     {
         _view = view;
 
-        var modelManager = ModelManager.Instance;
-
-        _model = modelManager.GetModel<HealthModel>(ModelType.HealthModel);
-
-        _model._healthEvent += UpdateHealthView;
+        _model = new HealthModel();
+        _model.HealthEvent += UpdateHealthView;
     }
 
     public void UpdateHealthView(int damage)
     {
         _view.UpdateUI(damage);
+    }
+
+    public void DestroyView()
+    {
+        _model.HealthEvent -= UpdateHealthView;
     }
 }

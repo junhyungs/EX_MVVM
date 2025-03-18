@@ -8,7 +8,7 @@ public class GameUIManager : SingletonMonobehaviour<GameUIManager>
     private static Dictionary<ModelType, Delegate> _modelActionDictionary
         = new Dictionary<ModelType, Delegate>();
 
-    public static void RegisterModelAction(ModelType type, Action action)
+    public static void RegisterModelAction<T>(ModelType type, Action<T> action)
     {
         if (!_modelActionDictionary.ContainsKey(type))
         {
@@ -47,11 +47,11 @@ public class GameUIManager : SingletonMonobehaviour<GameUIManager>
     //| TypeB      | Action3           |
     //+----------------------+
 
-    public void ModelTrigger(ModelType modelType)
+    public void ModelTrigger<T>(ModelType modelType, T value)
     {
-        if(_modelActionDictionary.TryGetValue(modelType, out Delegate value))
+        if(_modelActionDictionary.TryGetValue(modelType, out Delegate callBack))
         {
-            (value as Action).Invoke();
+            (callBack as Action<T>).Invoke(value);
         }
     }
 }

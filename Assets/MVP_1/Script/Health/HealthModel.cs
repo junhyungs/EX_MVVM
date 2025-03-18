@@ -1,38 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using ModelClass;
 using System;
 
-public class HealthModel : Model
+public class HealthModel
 {
     private int _health;
-    public event Action<int> _healthEvent;
+    public event Action<int> HealthEvent;
 
     public int Health
     {
         get => _health;
-        set
+        private set
         {
             _health = value;
-            _healthEvent.Invoke(_health);
+            HealthEvent.Invoke(_health);
         }
-    }
+    }    
 
     public HealthModel()
     {
-        ModelManager.RegisterModel(ModelType.HealthModel, this);
-
-        _health = 100;
+        GameUIManager.RegisterModelAction<int>(ModelType.HealthModel, SetHealth);
     }
 
-    public void RemoveModel()
+    ~HealthModel()
     {
-        ModelManager.UnRegisterModel(ModelType.HealthModel);
+        GameUIManager.UnRegisterModelAction(ModelType.HealthModel);
     }
 
-    public void TakeDamage(int damage)
+    public void SetHealth(int health)
     {
-        Health -= damage;
+        Health = health;
     }
 }
