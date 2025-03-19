@@ -68,4 +68,10 @@ public enum TriggerType
 {
     HealthModel,
     AbilityModel,
+    MVVM_Health,
+    MVVM_Level,
+    MVVM_STR,
+    MVVM_DEX,
+    MVVM_LUK,
+    MVVM_INT
 }

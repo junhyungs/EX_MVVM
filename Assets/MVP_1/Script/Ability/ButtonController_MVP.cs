@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class ButtonController : MonoBehaviour
+public class ButtonController_MVP : MonoBehaviour
 {
     [Header("Buttons"), SerializeField] private Button[] _buttons;
 
