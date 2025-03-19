@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using CustomPresenter;
 
-public class HealthPresenter
+public class HealthPresenter : Presenter<IHealthView>
 {
-    private IHealthView _view;
-
-    public HealthPresenter(IHealthView view)
+    public HealthPresenter(IHealthView view) : base(view)
     {
         _view = view;
 
-        GameUIManager.RegisterModelAction<int>(TriggerType.HealthModel, UpdateHealthView);
+        GameUIManager.RegisterModelAction<int>
+            (TriggerType.HealthModel, UpdateHealthView);
     }
 
     public void UpdateHealthView(int damage)
@@ -17,7 +17,7 @@ public class HealthPresenter
         _view.UpdateUI(damage);
     }
 
-    public void DestroyView()
+    public override void DestroyView()
     {
         GameUIManager.UnRegisterModelAction(TriggerType.HealthModel);
     }

@@ -192,7 +192,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LevelUP
+  m_Text: 
 --- !u!222 &64423548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 133460824}
   - component: {fileID: 133460823}
   - component: {fileID: 133460822}
+  - component: {fileID: 133460826}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -303,6 +304,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &133460826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133460821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ebae0649b3d3a42af835fd3d8b6269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &138112961
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +329,7 @@ GameObject:
   - component: {fileID: 138112964}
   - component: {fileID: 138112963}
   m_Layer: 5
-  m_Name: LUKDownButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,7 +398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 138112964}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickDown
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &138112964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,7 +461,7 @@ GameObject:
   - component: {fileID: 182526570}
   - component: {fileID: 182526569}
   m_Layer: 5
-  m_Name: LevelValueText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,7 +914,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STRDown
+  m_Text: 
 --- !u!222 &281112187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1036,7 +1061,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INTDown
+  m_Text: 
 --- !u!222 &446210755
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1057,7 +1082,7 @@ GameObject:
   - component: {fileID: 449552532}
   - component: {fileID: 449552531}
   m_Layer: 5
-  m_Name: LUKValueText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1162,7 @@ GameObject:
   - component: {fileID: 546517303}
   - component: {fileID: 546517302}
   m_Layer: 5
-  m_Name: STRUPButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 546517303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &546517303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,7 +1295,7 @@ GameObject:
   - component: {fileID: 546566556}
   - component: {fileID: 546566555}
   m_Layer: 5
-  m_Name: DEXDownButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1327,7 +1364,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 546566556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickDown
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &546566556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,7 +1427,7 @@ GameObject:
   - component: {fileID: 598438848}
   - component: {fileID: 598438847}
   m_Layer: 5
-  m_Name: STRValueText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1694,7 +1743,7 @@ GameObject:
   - component: {fileID: 915664396}
   - component: {fileID: 915664395}
   m_Layer: 5
-  m_Name: INTValueText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1774,7 +1823,7 @@ GameObject:
   - component: {fileID: 967107711}
   - component: {fileID: 967107710}
   m_Layer: 5
-  m_Name: INTUPButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 967107711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &967107711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,6 +1943,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967107708}
   m_CullTransparentMesh: 1
+--- !u!1 &1026119181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026119182}
+  - component: {fileID: 1026119183}
+  m_Layer: 5
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1026119182
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026119181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1769727473}
+  - {fileID: 1646556921}
+  - {fileID: 1619968449}
+  m_Father: {fileID: 1828182172}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1026119183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026119181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b693afd6ec64237438d597ca59ad47f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttons:
+  - {fileID: 1251911500}
+  - {fileID: 546517302}
+  - {fileID: 1092059416}
+  - {fileID: 1163308570}
+  - {fileID: 967107710}
+  - {fileID: 2039309601}
+  - {fileID: 1129795272}
+  - {fileID: 546566555}
+  - {fileID: 138112963}
+  - {fileID: 2071044089}
 --- !u!1 &1080492873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +2014,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1080492874}
+  - component: {fileID: 1080492875}
   m_Layer: 5
   m_Name: AbilityUI
   m_TagString: Untagged
@@ -1918,6 +2042,30 @@ RectTransform:
   m_AnchoredPosition: {x: -450, y: 240}
   m_SizeDelta: {x: 450, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1080492875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080492873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31934575fadb31347ac9a0065323e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _valueText:
+  - {fileID: 182526569}
+  - {fileID: 598438847}
+  - {fileID: 1955487921}
+  - {fileID: 449552531}
+  - {fileID: 915664395}
+  _nameText:
+  - {fileID: 807409052}
+  - {fileID: 1985950289}
+  - {fileID: 1964298693}
+  - {fileID: 640129130}
+  - {fileID: 759001248}
 --- !u!1 &1092059414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +2079,7 @@ GameObject:
   - component: {fileID: 1092059417}
   - component: {fileID: 1092059416}
   m_Layer: 5
-  m_Name: DEXUpButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2000,7 +2148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1092059417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1092059417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,7 +2212,7 @@ GameObject:
   - component: {fileID: 1129795273}
   - component: {fileID: 1129795272}
   m_Layer: 5
-  m_Name: STRDownButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2121,7 +2281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1129795273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickDown
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129795273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2305,7 +2477,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LUKDown
+  m_Text: 
 --- !u!222 &1160690077
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2327,7 +2499,7 @@ GameObject:
   - component: {fileID: 1163308571}
   - component: {fileID: 1163308570}
   m_Layer: 5
-  m_Name: LUKUPButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2396,7 +2568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1163308571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1163308571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,7 +2689,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LevelDown
+  m_Text: 
 --- !u!222 &1185762157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2527,7 +2711,7 @@ GameObject:
   - component: {fileID: 1251911501}
   - component: {fileID: 1251911500}
   m_Layer: 5
-  m_Name: LevelUPButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2596,7 +2780,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1251911501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickUp
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1251911501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2998,7 +3194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STRUP
+  m_Text: 
 --- !u!222 &1346724685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3077,7 +3273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DEXDown
+  m_Text: 
 --- !u!222 &1466581671
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3156,7 +3352,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INTUP
+  m_Text: '
+
+'
 --- !u!222 &1495825731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3235,7 +3433,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LUKUP
+  m_Text: '
+
+'
 --- !u!222 &1565102426
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3314,7 +3514,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DEXUP
+  m_Text: '
+
+'
 --- !u!222 &1594759570
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3529,17 +3731,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619968448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274531083}
-  m_Father: {fileID: 1828182172}
+  m_Father: {fileID: 1026119182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -325, y: -186}
+  m_AnchoredPosition: {x: 585, y: 304}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1646556920
@@ -3566,7 +3768,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646556920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3576,11 +3778,11 @@ RectTransform:
   - {fileID: 546566554}
   - {fileID: 138112962}
   - {fileID: 2071044088}
-  m_Father: {fileID: 1828182172}
+  m_Father: {fileID: 1026119182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 606, y: 150}
+  m_AnchoredPosition: {x: -304, y: -340}
   m_SizeDelta: {x: 1000, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646556922
@@ -3633,7 +3835,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769727472}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3643,11 +3845,11 @@ RectTransform:
   - {fileID: 1092059415}
   - {fileID: 1163308569}
   - {fileID: 967107709}
-  m_Father: {fileID: 1828182172}
+  m_Father: {fileID: 1026119182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 606, y: 330}
+  m_AnchoredPosition: {x: -304, y: -160}
   m_SizeDelta: {x: 1000, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1769727474
@@ -3708,9 +3910,7 @@ RectTransform:
   m_Children:
   - {fileID: 1866164543}
   - {fileID: 1080492874}
-  - {fileID: 1769727473}
-  - {fileID: 1646556921}
-  - {fileID: 1619968449}
+  - {fileID: 1026119182}
   m_Father: {fileID: 133460825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3818,7 +4018,7 @@ GameObject:
   - component: {fileID: 1955487922}
   - component: {fileID: 1955487921}
   m_Layer: 5
-  m_Name: DEXValueText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4056,7 +4256,7 @@ GameObject:
   - component: {fileID: 2039309602}
   - component: {fileID: 2039309601}
   m_Layer: 5
-  m_Name: LevelDownButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4125,7 +4325,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2039309602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickDown
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2039309602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4267,7 +4479,7 @@ Transform:
   m_GameObject: {fileID: 2042315922}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4310,7 +4522,7 @@ GameObject:
   - component: {fileID: 2071044090}
   - component: {fileID: 2071044089}
   m_Layer: 5
-  m_Name: INTDownButton
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4379,7 +4591,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2071044090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026119183}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnClickDown
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2071044090
 MonoBehaviour:
   m_ObjectHideFlags: 0

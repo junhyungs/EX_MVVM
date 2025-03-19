@@ -54,9 +54,18 @@ public class GameUIManager : SingletonMonobehaviour<GameUIManager>
             (callBack as Action<T>).Invoke(value);
         }
     }
+
+    public Action<T>GetTrigger<T>(TriggerType triggerType)
+    {
+        if (_modelActionDictionary.TryGetValue(triggerType, out Delegate callBack))
+            return (callBack as Action<T>);
+
+        return null;
+    }
 }
 
 public enum TriggerType
 {
-    HealthModel
+    HealthModel,
+    AbilityModel,
 }

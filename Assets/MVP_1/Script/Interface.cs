@@ -7,4 +7,7 @@ public interface IView<T>
 }
 
 public interface IHealthView : IView<int> { }
-
+public interface IAbilityView
+{
+    public void UpdateUI(Buttons type, int value);
+}
